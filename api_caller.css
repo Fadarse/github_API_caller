@@ -87,7 +87,6 @@ button {
     @media ( max-width: 375px){
     width: 80%;
     
-    height: fit-content;
     }
 }
 p{
