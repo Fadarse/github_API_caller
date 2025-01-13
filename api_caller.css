@@ -2,6 +2,12 @@
 *::after {
   box-sizing: border-box;
 }
+html, body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  justify-content: center;
+}
 .selection-container {
   display: grid;
   width: 70%;
@@ -45,16 +51,26 @@ button {
 }
 .result-container {
     display: grid;
-    margin: 25px;
-    width: 95%;
+    margin: 2rem;
     height: 410px;
     gap: 15px;
     padding: 15px;
     border: solid black;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     max-height: 600px;
     background-color: rgb(221, 241, 255);
     overflow-y: scroll;
+    justify-content: space-evenly;
+
+  @media (max-width: 769px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 375px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+
+ 
 }
 .card {
     display: grid;
@@ -63,6 +79,16 @@ button {
     padding: 5px;
     border: solid gray; 
     overflow: auto;  
+    justify-self: center;
+    
+    @media ( max-width: 426px){
+    width: 95%;
+    }
+    @media ( max-width: 375px){
+    width: 80%;
+    
+    height: fit-content;
+    }
 }
 p{
     line-height: 20px;
